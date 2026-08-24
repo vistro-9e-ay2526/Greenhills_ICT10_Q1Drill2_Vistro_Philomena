@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PyScript CSS -->
+        <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css">
+        <!-- This script tag bootstraps PyScript -->
+        <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+    <title>Working With Numbers</title>
+    <style>
+        body {
+            background: linear-gradient(110deg, #b9d4e8, #a7c8c2);
+            padding: 20px;
+            align-content: center;
+        }
+        form {
+            background: linear-gradient(70deg, #4858a4, #2570ae);
+            border-color: #181e53;
+            border-style: solid;
+            border-width: 5px;
+            border-radius: 20px;
+            padding: 20px;
+            max-width: 360px;
+            margin: auto; 
+            margin-top: 40px; 
+        }
+        .container {
+            background-color: #332452;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 45px;
+        }
+        input[type='number'] {
+            border-width: 3px;
+            border-style: solid;
+            border-color: #91b1c9;
+            width: 200px;
+            background-color: #b9d4e8;
+        }
+        #add_multiply {
+            background-color: #39265e;
+            color: #b9d4e8;
+            border-color: black;
+            border-width: 2px;
+            border-style: solid;
+            border-radius: 5px;
+            padding: 10px; 
+            width: 70px; 
+            margin: 5px;
+            margin-left: 20px;
+            box-shadow: 0px 5px 1px rgba(0,0,0,0.1);
+        }
+        #subtract_divide {
+            background-color: #39265e;
+            color: #b9d4e8;
+            border-color: black;
+            border-width: 2px;
+            border-style: solid;
+            border-radius: 5px;
+            padding: 10px; 
+            width: 70px;
+            margin: 5px; 
+            box-shadow: 0px 5px 1px rgba(0,0,0,0.1);
+        }
+        #pt2 {
+            background-color: #181e53;
+            color: #b9d4e8;
+            border-color: black;
+            border-width: 2px;
+            border-style: solid;
+            border-radius: 5px;
+            padding: 10px;
+            width: 230px;
+            margin: 5px;
+            margin-left: 20px;
+            box-shadow: 0px 5px 1px rgba(0,0,0,0.1);
+        }
+        #output {
+            color: #ec6012;
+            font-weight: bold;
+            font-family: 'Gill Sans', sans-serif;
+            font-size: small;
+            text-align: right;
+            background-color: #b9d4e8;
+            border-color: #91b1c9;
+            border-style: solid;
+            padding: 10px;
+            margin-left: 40%;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div class="container">
+            <input type="number" id="num1" placeholder="Enter first number"><br><br>
+            <input type="number" id="num2" placeholder="Enter second number/exponent"><br><br>
+            <div id="output"></div><br>
+        </div>
+
+        <input type="button" py-click="add_numbers" value="Add" id="add_multiply">
+        <input type="button" py-click="subtract_numbers" value="Subtract" id="subtract_divide">
+        <br>
+        <input type="button" py-click="multiply_numbers" value="Multiply" id="add_multiply">
+        <input type="button" py-click="divide_numbers" value="Divide" id="subtract_divide">
+        <br><br>
+        <input type="button" py-click="raise_numbers" value="Raise (Exponent)" id="pt2"><br>
+        <input type="button" py-click="floordivide_numbers" value="Divide (Floor Division)" id="pt2"><br>
+        <input type="button" py-click="modulo_numbers" value="Mod (Modulo)" id="pt2"><br><br>
+    </form>
+    
+    <py-script src="main.py"></py-script>
+    
+</body>
+</html>
